@@ -7,3 +7,9 @@ try $ modinfo hello-*.ko to see what kind of informatino it is.
 
 to insert the compiled module into the kernel you should try $ insmod ./hello-km.ko
 
+Important:
+Make sure you have not Secure Boot enabled in order to perform insmod.
+You can see the Secure Boot status with the following command:
+$ dmesg | grep -i secure
+Returns 0 for disabled
+Returns 1 for enabled
